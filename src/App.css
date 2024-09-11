@@ -1,0 +1,119 @@
+.hero-section {
+    position: relative;
+    background-color: #fce2cc; /* Light peach background */
+    color: #000; /* Text color */
+    padding: 100px 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse; /* Flip the image and text positions */
+    max-height: 90vh !important;
+}
+.hero-content {
+    z-index: 1;
+    max-width: 600px;
+    
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+#about-btn{
+  margin-top: -50px !important;
+}
+#abt-img{
+  /* margin-left: 30px; */
+  margin-bottom: 2rem;
+}
+section {
+    padding: 70px 100px;
+}
+section h2 {
+    font-size: 2rem !important;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.hero-image {
+    position: relative;
+    z-index: 2;
+    width: 500px;
+    height: auto;
+    margin-left: 50px;
+    margin-top: -60px;
+    
+}
+.about-image {
+    position: relative;
+    z-index: 2;
+    width: 400px;
+    height: auto;
+    margin-left: auto;
+    margin-top: -60px;
+    
+}
+#abt-btn {
+    margin-top: 2rem !important;
+}
+.diagonal-background {
+    position: absolute;
+    top: 0;
+    left: 0; /* Move background to the left */
+    bottom: 0;
+    right: 50%;
+    background-color: #1f2937; /* Orange color */
+    transform: skewX(20deg); /* Adjust the skew direction */
+    z-index: 0;
+}
+
+/* Responsive styles */
+@media (min-width: 900px) {
+  .hero-content {
+    margin-right: 60px;
+  }}
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+  section {
+    padding: 70px 20px;
+}
+}
