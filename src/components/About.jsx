@@ -3,7 +3,7 @@ import Button from '../components/Button';
 
 const About = () => {
   return (
-    <section className="bg-gray-900 text-white py-12 px-6 md:px-12 lg:px-24">
+    <section className="bg-gray-900 text-white py-12 px-6 md:px-12 lg:px-24" id="About">
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         {/* Image Section */}
         <div className="md:w-1/2 mt-8 md:mt-0">
@@ -64,12 +64,14 @@ const About = () => {
 
           {/* Button Section */}
           <div className="mt-6">
-            <Button
-              link="#!"
-              background="bg-[#fce2cc] p-4 rounded text-center"
-              content="Download My Resume"
-              textColor="text-gray-800"
-            />
+          <a
+            href="resume.pdf" 
+            download="resume.pdf"
+            className="bg-[#fce2cc] p-4 rounded text-center text-gray-800"
+          >
+            Download My Resume
+          </a>
+
           </div>
         </div>
       </div>

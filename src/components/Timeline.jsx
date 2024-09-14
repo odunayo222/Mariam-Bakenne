@@ -33,7 +33,7 @@ const WorkExperience = () => {
   ];
 
   return (
-    <section className="bg-[#fce2cc] py-12">
+    <section className="bg-[#fce2cc] py-12" id="Experience">
       <div className="container mx-auto">
         <h2 className="text-4xl font-semibold text-center mb-8">Work Experience</h2>
         <p className="text-center text-gray-500 mb-12">

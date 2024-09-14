@@ -11,6 +11,7 @@ import Education from './components/Education'
 import Contact from './components/Contact'
 import PortfolioBlog from './components/Blog'
 import Footer from './components/Footer'
+import Scroll from './components/Scroll'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Education />
           <PortfolioBlog/>
           <Contact />
+          <Scroll />
           <Footer />
        </main>
    </div>

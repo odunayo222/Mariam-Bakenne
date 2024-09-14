@@ -10,7 +10,7 @@ const skills = [
 
 const MyExpertise = () => {
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white py-12 pb-28 pt-16" id="Skills">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-8">My Expertise Area</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

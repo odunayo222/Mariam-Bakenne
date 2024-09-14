@@ -39,6 +39,10 @@
     text-decoration: none;
     font-size: 1rem;
 }
+.huh {
+  color: #111827;
+  /* padding-left: 1.5rem; */
+}
 #about-btn{
   margin-top: -50px !important;
 }
@@ -81,7 +85,7 @@ section h2 {
     left: 0; /* Move background to the left */
     bottom: 0;
     right: 50%;
-    background-color: #1f2937; /* Orange color */
+    background-color: #111827; /* Orange color */
     transform: skewX(20deg); /* Adjust the skew direction */
     z-index: 0;
 }
@@ -96,12 +100,27 @@ section h2 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
+    color: white;
 
+  }
+  .diagonal-background {
+    position: absolute;
+    top: 0;
+    left: 0; /* Move background to the left */
+    bottom: 0;
+    right: 50%;
+    background-color: #111827; /* Orange color */
+    transform: skewX(0deg); /* Adjust the skew direction */
+    z-index: 0;
+}
+  
   .hero-image {
     display: none;
   }
-
+  .hero-buttons{
+    padding-left: 2rem;
+    margin-left: 1.5rem;
+  }
   .hero-content {
     max-width: 100%;
   }
@@ -115,5 +134,9 @@ section h2 {
   }
   section {
     padding: 70px 20px;
+}
+.huh {
+  /* color: #111827; */
+  padding-left: 1.5rem;
 }
 }

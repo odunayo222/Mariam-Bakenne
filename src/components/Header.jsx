@@ -5,11 +5,11 @@ export default function Header() {
     <header className="header">
         <div className="hero-section">
             <div className="hero-content">
-                <h1>Hello, I’m ✌️<br/>Mariam Bakenne</h1>
-                <p>Data Scientist | Web Developer</p>
+                <h1>Hello, <span className='huh'>I’m </span>✌️<br/>Mariam <span className='huh'> Bakenne</span></h1>
+                <p><b>Data Scientist | <span className='huh'>Web Developer</span></b></p>
                 <div className="hero-buttons">
-                    <Button background="bg-gray-800" content="Let's Talk" hover="hover:bg-transparent hover:text-gray-800" textColor="text-white"/>
-                    <Button background="bg-transparent" content="My Work" hover="hover:bg-gray-800 hover:text-white" textColor="text-gray-800"/>
+                    <Button link="#Contact" background="bg-gray-800" content="Let's Talk" hover="hover:bg-transparent hover:text-gray-800" textColor="text-white"/>
+                    <Button link="#Volunteer" background="bg-transparent border-gray-800" content="Volunteer Work" hover="hover:bg-gray-800 hover:text-white" textColor="text-gray-800 "/>
                 </div>
             </div>
             <img src="/header-img.png" alt="Mark Henry" className="hero-image" />
