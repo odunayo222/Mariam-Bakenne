@@ -1,12 +1,14 @@
 import React from 'react';
 import { FaLaptopCode, FaChalkboardTeacher, FaUserMd, FaBriefcase } from 'react-icons/fa'; // Example icons
+import { useInView } from 'react-intersection-observer'; // Import useInView
 
 const WorkExperience = () => {
   const experiences = [
     {
       title: 'Coordinator / Girls Coding',
       years: '2017 - 2021',
-      description: "I'm an expert in curriculum creation, mentorship, and building inclusive learning environments, with a passion for nurturing the next generation of female programmers and promoting diversity in the tech sector.",
+      description:
+        "I'm an expert in curriculum creation, mentorship, and building inclusive learning environments, with a passion for nurturing the next generation of female programmers and promoting diversity in the tech sector.",
       icon: <FaChalkboardTeacher className="text-3xl text-orange-500 mb-4" />,
     },
     {
@@ -41,16 +43,33 @@ const WorkExperience = () => {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="bg-white shadow-md p-6 rounded-lg">
-              <div className="flex justify-center">{exp.icon}</div>
-              <h3 className="text-xl font-semibold mb-2 text-center">{exp.title}</h3>
-              <p className="text-gray-800 text-center mb-4">{exp.years}</p>
-              <p className="text-gray-600 text-center">{exp.description}</p>
-            </div>
+            <ExperienceCard key={index} exp={exp} />
           ))}
         </div>
       </div>
     </section>
+  );
+};
+
+// Experience Card component with animation
+const ExperienceCard = ({ exp }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: false, // Allow animation every time in view
+    threshold: 0.1, // Trigger when 10% of the card is in view
+  });
+
+  return (
+    <div
+      ref={ref}
+      className={`bg-white shadow-md p-6 rounded-lg transform transition-all duration-700 ease-out ${
+        inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
+      <div className="flex justify-center">{exp.icon}</div>
+      <h3 className="text-xl font-semibold mb-2 text-center">{exp.title}</h3>
+      <p className="text-gray-800 text-center mb-4">{exp.years}</p>
+      <p className="text-gray-600 text-center">{exp.description}</p>
+    </div>
   );
 };
 

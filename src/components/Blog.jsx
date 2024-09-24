@@ -1,4 +1,5 @@
 import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
 const volunteerPrograms = [
   {
@@ -7,11 +8,7 @@ const volunteerPrograms = [
     summary: 'Led a program designed to teach young girls how to code. Built curriculums, mentored over 200 participants, and promoted diversity in the tech industry.',
     imageUrl: '/img14.jpg', // Replace with actual image
     link: 'https://www.linkedin.com/in/mariam-bakenne-65660810a/overlay/urn:li:fsd_profilePosition:(ACoAABt_oaIBWcIWD0cCS_NZNVDmlcZEIj-66lY,1920720963)/skill-associations-details?profileUrn=urn%3Ali%3Afsd_profile%3AACoAABt_oaIBWcIWD0cCS_NZNVDmlcZEIj-66lY&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Blz0nMo6lReqQMBJouHInBQ%3D%3D',
-    gallery: [
-      '/gcc.jpeg', // Replace with actual images
-      '/gc.jpg',
-      '/gccc.jpg',
-    ]
+    gallery: ['/gcc.jpeg', '/gc.jpg', '/gccc.jpg'],
   },
   {
     title: 'Community Health Worker / Caring Hearts Scotland',
@@ -19,11 +16,7 @@ const volunteerPrograms = [
     summary: 'Assisted in implementing individualized care plans for elderly patients. Focused on improving the health and well-being of the community by providing support and care.',
     imageUrl: '/img9.jpg', // Replace with actual image
     link: '#',
-    gallery: [
-      '/img5.jpg', // Replace with actual images
-      '/img6.jpg',
-      '/img3.jpg',
-    ]
+    gallery: ['/img5.jpg', '/img6.jpg', '/img3.jpg'],
   },
   {
     title: 'Youth Mentor / STEM for All',
@@ -31,11 +24,7 @@ const volunteerPrograms = [
     summary: 'Mentored high school students in science, technology, engineering, and mathematics (STEM), focusing on building interest in STEM fields and fostering leadership skills.',
     imageUrl: '/img9.jpg', // Replace with actual image
     link: '#',
-    gallery: [
-      'img3.jpg', // Replace with actual images
-      'img10.jpg',
-      'img8.jpg',
-    ]
+    gallery: ['img3.jpg', 'img10.jpg', 'img8.jpg'],
   },
 ];
 
@@ -49,43 +38,60 @@ const VolunteerPrograms = () => {
         </p>
 
         {/* Grid Layout for Volunteer Programs */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-3 gap-8">
           {volunteerPrograms.map((program, index) => (
-            <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
-              <img src={program.imageUrl} alt={program.title} className="w-full h-48 object-cover" />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-2">{program.title}</h3>
-                <p className="text-gray-500 text-sm mb-4">{program.date}</p>
-                <p className="text-gray-700 mb-6">{program.summary}</p>
-
-                {/* Picture Gallery */}
-                <div className="mt-6">
-                  <h4 className="text-lg font-semibold mb-4">Picture Gallery</h4>
-                  <div className="flex space-x-2">
-                    {program.gallery.map((pic, picIndex) => (
-                      <img
-                        key={picIndex}
-                        src={pic}
-                        alt={`${program.title} gallery ${picIndex + 1}`}
-                        className="w-20 h-20 object-cover rounded-lg"
-                      />
-                    ))}
-                  </div>
-                </div>
-
-                <a
-                  href={program.link}
-                  className="text-gray-800 font-semibold hover:text-gray-600 transition-colors mt-4 inline-block"
-                  target='_blank'
-                >
-                  Learn More →
-                </a>
-              </div>
-            </div>
+            <VolunteerCard key={index} program={program} />
           ))}
         </div>
       </div>
     </section>
+  );
+};
+
+const VolunteerCard = ({ program }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.1, // Trigger when 10% of the card is in view
+    triggerOnce: false, // Animation re-triggers on re-entry
+  });
+
+  return (
+    <div
+      ref={ref}
+      className={`bg-white shadow-lg rounded-lg overflow-hidden transition-opacity duration-700 ease-out transform ${
+        inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
+      <img src={program.imageUrl} alt={program.title} className="w-full h-48 object-cover" />
+      <div className="p-6">
+        <h3 className="text-2xl font-semibold mb-2">{program.title}</h3>
+        <p className="text-gray-500 text-sm mb-4">{program.date}</p>
+        <p className="text-gray-700 mb-6">{program.summary}</p>
+
+        {/* Picture Gallery */}
+        <div className="mt-6">
+          <h4 className="text-lg font-semibold mb-4">Picture Gallery</h4>
+          <div className="flex space-x-2">
+            {program.gallery.map((pic, picIndex) => (
+              <img
+                key={picIndex}
+                src={pic}
+                alt={`${program.title} gallery ${picIndex + 1}`}
+                className="w-20 h-20 object-cover rounded-lg"
+              />
+            ))}
+          </div>
+        </div>
+
+        <a
+          href={program.link}
+          className="text-gray-800 font-semibold hover:text-gray-600 transition-colors mt-4 inline-block"
+          target='_blank'
+          rel="noopener noreferrer"
+        >
+          Learn More →
+        </a>
+      </div>
+    </div>
   );
 };
 

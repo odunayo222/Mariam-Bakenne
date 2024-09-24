@@ -140,3 +140,15 @@ section h2 {
   padding-left: 1.5rem;
 }
 }
+/* Initial hidden state for both text and image */
+.hero-content, .hero-image {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Visible state after the class is added */
+.content-visible, .image-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
