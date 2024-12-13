@@ -40,7 +40,7 @@ export default function Header() {
             Hello, <span className='huh'>I’m </span>✌️<br />
             Mariam <span className='huh'> Bakenne</span>
           </h1>
-          <p><b>Data Scientist | <span className='huh'>Web Developer</span></b></p>
+          <p><b>Data Scientist | <span className='huh'>Volunteer</span></b></p>
           <div className="hero-buttons">
             <Button link="#Contact" background="bg-gray-800" content="Let's Talk" hover="hover:bg-transparent hover:text-gray-800" textColor="text-white" />
             <Button link="#Volunteer" background="bg-transparent border-gray-800" content="Volunteer Work" hover="hover:bg-gray-800 hover:text-white" textColor="text-gray-800 " />

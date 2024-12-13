@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-semibold mb-4 text-white">About Me</h4>
             <p className="text-gray-300 text-pretty text-justify">
-            I’m a data analyst and frontend developer passionate about turning data into insights and creating responsive, user-friendly web interfaces. I also mentor young girls in web development, inspiring the next generation of tech enthusiasts.
+            Passionate Data Scientist with 5 years of experience in data analysis, machine learning, and predictive modeling, dedicated to leveraging data for impactful decisions. Committed to community engagement and driving meaningful change through technology and innovation.
             </p>
           </div>
 
@@ -18,10 +18,10 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-semibold mb-4 text-white">Quick Links</h4>
             <ul className="text-gray-300 space-y-2">
-              <li><a href="/about" className="hover:text-white">About</a></li>
-              <li><a href="/portfolio" className="hover:text-white">Portfolio</a></li>
-              <li><a href="/services" className="hover:text-white">Services</a></li>
-              <li><a href="/contact" className="hover:text-white">Contact</a></li>
+              <li><a href="#About" className="hover:text-white">About</a></li>
+              <li><a href="#Skills" className="hover:text-white">Skills</a></li>
+              <li><a href="#Services" className="hover:text-white">Services</a></li>
+              <li><a href="#Contact" className="hover:text-white">Contact</a></li>
             </ul>
           </div>
 
@@ -29,9 +29,9 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-semibold mb-4 text-white">Contact Info</h4>
             <ul className="text-gray-300 space-y-2">
-              <li><i className="fa-regular fa-envelope"></i>  Email: <a href="mailto:example@gmail.com" className="hover:text-white">example@gmail.com</a></li>
-              <li><i className="fa-solid fa-phone"></i> Phone: <a href="tel:+1234567890" className="hover:text-white">+123 456 7890</a></li>
-              <li><i className="fa-solid fa-location-dot"></i> Location: Lagos, Nigeria</li>
+              <li><i className="fa-regular fa-envelope"></i>  Email: <a href="mailto:example@gmail.com" className="hover:text-white">mizbaken@gmail.com</a></li>
+              <li><i className="fa-solid fa-phone"></i> Phone: <a href="tel:+44 7342 487638" className="hover:text-white">+44 7342 487638</a></li>
+              <li><i className="fa-solid fa-location-dot"></i> Location: Edinburgh, United Kingdom</li>
             </ul>
           </div>
         </div>

@@ -6,35 +6,43 @@ const volunteerPrograms = [
     title: 'Coordinator / Girls Coding Initiative',
     date: '2017 - 2021',
     summary: 'Led a program designed to teach young girls how to code. Built curriculums, mentored over 200 participants, and promoted diversity in the tech industry.',
-    imageUrl: '/img14.jpg', // Replace with actual image
-    link: 'https://www.linkedin.com/in/mariam-bakenne-65660810a/overlay/urn:li:fsd_profilePosition:(ACoAABt_oaIBWcIWD0cCS_NZNVDmlcZEIj-66lY,1920720963)/skill-associations-details?profileUrn=urn%3Ali%3Afsd_profile%3AACoAABt_oaIBWcIWD0cCS_NZNVDmlcZEIj-66lY&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Blz0nMo6lReqQMBJouHInBQ%3D%3D',
+    imageUrl: '/img14.jpg', 
+    link: 'https://www.linkedin.com/in/mariam-bakenne-65660810a/',
     gallery: ['/gcc.jpeg', '/gc.jpg', '/gccc.jpg'],
   },
   {
-    title: 'Community Health Worker / Caring Hearts Scotland',
-    date: '2023',
-    summary: 'Assisted in implementing individualized care plans for elderly patients. Focused on improving the health and well-being of the community by providing support and care.',
-    imageUrl: '/img9.jpg', // Replace with actual image
-    link: '#',
+    title: 'Women in Data, London',
+    date: 'May 2024 – Oct 2024 (6 months)',
+    summary: 'Volunteered as a Data Scientist, contributing to workshops, mentoring aspiring professionals, and providing data insights to support Women in Data’s mission of championing diversity, inclusion, and gender equity in technology and analytics.',
+    imageUrl: '/img9.jpg', 
+    link: 'https://www.linkedin.com/in/mariam-bakenne-65660810a/',
     gallery: ['/img5.jpg', '/img6.jpg', '/img3.jpg'],
   },
   {
-    title: 'Youth Mentor / STEM for All',
-    date: '2020 - 2022',
-    summary: 'Mentored high school students in science, technology, engineering, and mathematics (STEM), focusing on building interest in STEM fields and fostering leadership skills.',
-    imageUrl: '/img9.jpg', // Replace with actual image
-    link: '#',
-    gallery: ['img3.jpg', 'img10.jpg', 'img8.jpg'],
+    title: 'Lead Coding Instructor / SCA, Lagos',
+    date: 'September, 2020 – June 2022',
+    summary: 'Volunteered as Lead Coding Instructor, mentoring women, organizing tech events, and delivering training in machine learning and cloud computing to support She Code Africa’s mission of empowering women in tech.',
+    imageUrl: '/sca.jpg', 
+    link: 'https://www.linkedin.com/in/mariam-bakenne-65660810a/',
+    gallery: ['vol2.jpg', 'vol1.jpg', 'vol3.jpeg'],
   },
+  {
+    title: 'President / Lagos State University Rotaract Club',
+    date: 'July, 2018 – June, 2019',
+    summary: 'Led club representation at district meetings and public events, coordinated volunteer activities, raised funds for community projects, implemented a mentorship program to boost member engagement by 30%, and secured local business sponsorships to expand initiatives.',
+    imageUrl: '/rot.jpg', 
+    link: 'https://www.linkedin.com/in/mariam-bakenne-65660810a/',
+    gallery: ['rot2.jpeg', 'rot1.jpeg', 'rot3.jpeg'],
+  }
 ];
 
 const VolunteerPrograms = () => {
   return (
     <section className="bg-[#fce2cc] py-12" id='Volunteer'>
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-semibold text-center mb-8">Volunteer Programs</h2>
+        <h2 className="text-4xl font-semibold text-center mb-8">Volunteer / Leadership Programs</h2>
         <p className="text-center text-gray-600 mb-12">
-          Here are some of the volunteer programs I've been part of, focusing on giving back to the community and promoting positive change.
+          Here are some of the volunteer / leadership programs I've been part of, focusing on giving back to the community and promoting positive change.
         </p>
 
         {/* Grid Layout for Volunteer Programs */}

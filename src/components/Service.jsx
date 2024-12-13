@@ -48,11 +48,11 @@ const ServiceCard = ({ title, icon, description }) => {
 const Services = () => {
   const services = [
     {
-      title: 'Data Analysis',
+      title: 'Machine Learning',
       icon: (
         <path d="M3 3h18v2H3V3zm2 4h14v2H5V7zm-2 4h18v2H3v-2zm2 4h14v2H5v-2zM3 19h18v2H3v-2z" />
       ),
-      description: 'Transforming data into actionable insights.',
+      description: 'Solving real-world problems, making data-driven predictions, and delivering impactful insights.',
     },
     {
       title: 'Web Development',

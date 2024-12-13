@@ -40,10 +40,18 @@ const About = () => {
           }`}
           ref={textRef}
         >
-          <h2 className="text-4xl font-bold mb-4">Professional Data Analyst and Web Developer</h2>
-          <p className="mb-6 text-pretty text-justify">
-            I am a dedicated data analyst with a passion for turning data into actionable insights. With a strong background in data collection, analysis, and visualization, I am committed to helping organizations make informed decisions through data-driven solutions. In addition to my expertise in data analysis, I am also a skilled web developer (frontend) with experience in creating responsive, user-friendly interfaces. I have a particular passion for empowering the next generation of tech enthusiasts, having tutored young girls in web development and inspiring them to pursue careers in technology.
-          </p>
+          <h3 className="text-2xl font-semibold mb-4">Data-Driven Problem Solver | Data Scientist
+          </h3>
+          <div className="mb-6 text-pretty text-justify">
+          <p>As a Data Scientist, I am passionate about leveraging data, machine learning, and AI to solve complex problems and create meaningful impact. With a strong foundation in data analysis, predictive modeling, and storytelling, I turn data into actionable strategies that empower businesses and communities alike.</p>
+      
+           <h3 className='font-semibold text-2xl mt-4 pb-3'>💡 What Drives Me:</h3>
+            <p>What drives me is the passion for building predictive models and algorithms that uncover valuable insights and drive innovation. I am deeply committed to harnessing powerful tools such as Python, R, SQL, and visualization platforms like Tableau and Power BI to effectively communicate complex data and turn it into actionable strategies. Constantly exploring emerging technologies in AI and machine learning is essential to staying at the forefront of this rapidly evolving field. For me, data science is more than just a profession—it's a calling. Every dataset tells a unique story, and I thrive on uncovering those narratives to drive meaningful change. For me, data science is not just a profession—it’s a calling. Every dataset tells a story, and I thrive on uncovering narratives that drive change.</p>
+
+          <h3 className='font-semibold text-2xl mt-4'>🌟 Beyond the Numbers:</h3>
+
+          <p>Volunteering is a core part of my journey. Whether it’s mentoring aspiring data professionals, working with non-pro</p>
+          </div>
           <div className="space-y-2">
             {/* Info */}
             <div className="flex items-center">
@@ -53,7 +61,7 @@ const About = () => {
               <span className="w-28 font-semibold">Nationality</span> : Nigerian
             </div>
             <div className="flex items-center">
-              <span className="w-28 font-semibold">Phone</span> : (584) 154 8541
+              <span className="w-28 font-semibold">Phone</span> : +44 7342 487638
             </div>
             <div className="flex items-center">
               <span className="w-28 font-semibold">Email</span> : mizbaken@gmail.com
@@ -66,6 +74,9 @@ const About = () => {
             </div>
             <div className="flex items-center">
               <span className="w-28 font-semibold">Language</span> : English
+            </div>
+            <div className="flex items-center">
+              <span className="w-28 font-semibold">Location</span> : Edinburgh, United Kingdom
             </div>
           </div>
 
@@ -88,8 +99,8 @@ const About = () => {
           {/* Button Section */}
           <div className="mt-6">
             <a
-              href="resume.pdf"
-              download="resume.pdf"
+              href="Mariam-Bakenne(SeniorData Scientist) CV.pdf"
+              download="Mariam-Bakenne(SeniorData Scientist) CV.pdf"
               className="bg-[#fce2cc] p-4 rounded text-center text-gray-800 hover:bg-gray-700 hover:text-white transition duration-300"
             >
               Download My Resume

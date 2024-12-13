@@ -2,12 +2,13 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
 const skills = [
-  { name: 'Data visualisation', percentage: 80, color: 'bg-teal-400' },
-  { name: 'Statistical analysis', percentage: 95, color: 'bg-orange-400' },
-  { name: 'Data wrangling and cleaning', percentage: 60, color: 'bg-purple-400' },
-  { name: 'Machine learning', percentage: 85, color: 'bg-pink-400' },
-  { name: 'Python', percentage: 80, color: 'bg-blue-400' },
-  { name: 'Data Management', percentage: 90, color: 'bg-green-400' }
+  { name: 'Data analysis & Statistical Expertise', percentage: 80, color: 'bg-teal-400' },
+  { name: 'Machine learning & Artificial Intelligence', percentage: 95, color: 'bg-orange-400' },
+  { name: 'Data engineering & Infrastructure', percentage: 60, color: 'bg-purple-400' },
+  { name: 'Programming & Technical Skills', percentage: 85, color: 'bg-pink-400' },
+  { name: 'Data visualisation & storytelling', percentage: 80, color: 'bg-blue-400' },
+  { name: 'Domain knowledge & Applications ', percentage: 90, color: 'bg-green-400' },
+  { name: 'Soft skills & collaboration', percentage: 90, color: 'bg-orange-500' }
 ];
 
 const MyExpertise = () => {

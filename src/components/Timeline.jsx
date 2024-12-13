@@ -5,10 +5,10 @@ import { useInView } from 'react-intersection-observer'; // Import useInView
 const WorkExperience = () => {
   const experiences = [
     {
-      title: 'Coordinator / Girls Coding',
-      years: '2017 - 2021',
+      title: 'Data Analyst Instructional Facilitator / Pearls Africa Foundation',
+      years: 'November 2018 – April 2021',
       description:
-        "I'm an expert in curriculum creation, mentorship, and building inclusive learning environments, with a passion for nurturing the next generation of female programmers and promoting diversity in the tech sector.",
+        "Developed and delivered comprehensive data analysis courses, mentoring over 50 students to apply analytics to real-world problems. Trained students, with 80% securing analyst roles within six months. Designed a structured curriculum adopted by three schools and improved program retention by 20% through targeted curriculum enhancements.",
       icon: <FaChalkboardTeacher className="text-3xl text-orange-500 mb-4" />,
     },
     {
@@ -26,12 +26,19 @@ const WorkExperience = () => {
       icon: <FaBriefcase className="text-3xl text-green-500 mb-4" />,
     },
     {
-      title: 'Healthcare Assistance / Caring Hearts Scotland',
-      years: '2023',
+      title: 'Lead Data Scientist / DigiHealth Africa',
+      years: 'May 2020 – Present',
       description:
-        'Developed and implemented individual care plans based on assessments and in consultation with the service user and their family.',
+        'Designed and deployed a customer retention model with 74% accuracy, enhancing marketing strategies. Conducted exploratory data analysis (EDA) to identify retention drivers and built decision tree models using Python and Scikit-learn, integrated with FastAPI for real-time predictions. Improved data preprocessing techniques for optimal model performance.',
       icon: <FaUserMd className="text-3xl text-red-500 mb-4" />,
-    }
+    },
+    {
+      title: 'Data Scientist / NGCOM Network Solutions',
+      years: 'January 2023 – April 2024',
+      description:
+        'Analyzed large datasets to uncover market trends and user behaviors, supporting strategic decision-making. Conducted data mining and statistical analysis to optimize business strategies, resulting in a 30% increase in campaign conversion rates. Improved data quality, reducing inconsistencies by 15%, and delivered insights that contributed to a 10% rise in customer acquisition.',
+      icon: <FaUserMd className="text-3xl text-red-500 mb-4" />,
+    },
   ];
 
   return (

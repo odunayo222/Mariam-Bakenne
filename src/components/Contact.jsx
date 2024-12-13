@@ -1,49 +1,55 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  const form = useRef();
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    // Handle form submission logic (e.g., API call)
-    console.log('Form submitted:', formData);
+
+    emailjs
+      .sendForm('service_apnm9ww', 'template_5fguuf9', form.current, 'Zby4xv0eH2zIF2cBi') 
+      .then(
+        () => {
+          toast.success('Your message has been sent!', {
+            position: 'top-right',
+          });
+          e.target.reset();
+        },
+        (error) => {
+          toast.error(`Failed to send message: ${error.text}`, {
+            position: 'top-right',
+          });
+        }
+      );
   };
 
   return (
-    <section id='Contact'>
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-semibold text-center mb-8">Get in Touch</h2>
-        <p className="text-center text-gray-600 mb-12">
+    <section id='Contact' className=''>
+      <div className="container mx-auto px-4 pb-12">
+        <h2 className="text-2xl lg:text-3xl font-semibold text-center  text-[#] pt-10">Get in Touch</h2>
+        <p className="text-center GIT mb-12">
           Feel free to reach out if you have any questions or just want to connect.
         </p>
         <div className="max-w-lg mx-auto bg-white p-8 shadow-2xl rounded-lg">
-          <form onSubmit={handleSubmit}>
-            <div className="mb-6">
-              <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
-                placeholder="Your name"
-                required
-              />
+          <form ref={form} onSubmit={sendEmail}>
+            {/* Name and Phone Number: side by side on medium and large screens, stacked on small screens */}
+            <div className="mb-6 md:flex md:space-x-4">
+              <div className="w-full mb-6 md:mb-0">
+                <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+                  placeholder="Your name"
+                  required
+                />
+              </div>
             </div>
 
             <div className="mb-6">
@@ -54,10 +60,22 @@ const Contact = () => {
                 type="email"
                 id="email"
                 name="email"
-                value={formData.email}
-                onChange={handleInputChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
                 placeholder="Your email"
+                required
+              />
+            </div>
+
+            <div className="mb-6">
+              <label htmlFor="subject" className="block text-gray-700 font-semibold mb-2">
+                Subject
+              </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
+                placeholder="Subject"
                 required
               />
             </div>
@@ -69,8 +87,6 @@ const Contact = () => {
               <textarea
                 id="message"
                 name="message"
-                value={formData.message}
-                onChange={handleInputChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500"
                 placeholder="Your message"
                 rows="4"
@@ -89,6 +105,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 };
